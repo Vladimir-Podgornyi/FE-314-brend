@@ -32,6 +32,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     margin-left: 32px;
+    min-width: 0;
 }
 
 .brand {
@@ -46,7 +47,26 @@ html {
     box-sizing: border-box;
     text-align: center;
     align-items: center;
+
+    min-width: 0;
     
+    
+}
+.brand-more {
+    display: flex;
+}
+
+.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+
+    top: 185px;
+}
+.swiper-pagination-horizontal {
+    
+}
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #ddd;
 }
 
 
@@ -63,6 +83,12 @@ text-align: center;
 margin-right: 16px;
 }
 
+.brand-more {
+    display: none;
+}
+
+
+
 .lease {
     display: flex;
     justify-content: space-between;
@@ -74,10 +100,12 @@ margin-right: 16px;
     height: 24px;
     cursor: pointer;
 }
+
 .lease__open {
     background-image: url(../img/expand.svg);
     width: 24px;
     height: 24px;
+    transform: scale(-1);
 }
 
 .lease__text {
