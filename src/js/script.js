@@ -17,21 +17,53 @@ let swiper = new Swiper(".swiper", {
       const moreElements = document.querySelectorAll(".brand-more"); 
       const btnMore = document.querySelectorAll(".lease__more"); 
       const btnClouse = document.querySelectorAll(".lease__clouse"); 
+      const btnZwei = document.querySelectorAll(".brand-tbl");
     
-      let allHidden = true;
+      let all = true;
       let btnsClouse = true;
       let btnsMore = true;
-
+      let btnsZwei = true;
+     
+      
 
       /* ---------------открываем и закрываем блоки --------------- */
 
       moreElements.forEach((more) => {
         if (more.style.display === "none")  {
-          allHidden = true;
+          all = true;
         }
       });
 
-      if (allHidden) {
+      
+      btnsZwei = Array.from(btnZwei).every(
+        (el) => window.getComputedStyle(el).display === "flex"
+      );
+
+      if (btnsZwei) {
+        btnZwei.forEach((el) => (el.style.display = "flex"));
+       } else {
+        btnZwei.forEach((el) => (el.style.display = "none"));
+      }
+
+        
+    
+    
+     /*  if (btnsZwei) {
+
+        btnZwei.forEach((more) => {
+          more.style.display = "flex";
+        });
+
+      } else {
+
+        btnZwei.forEach((more) => {
+          more.style.display = "none";
+        });
+    } */
+
+
+
+      if (all) {
 
         moreElements.forEach((more) => {
           more.style.display = "flex";
@@ -65,6 +97,8 @@ let swiper = new Swiper(".swiper", {
           btnsClouse = true;
         }
       });
+
+      
       
        if (btnsClouse) {
 
@@ -84,21 +118,23 @@ let swiper = new Swiper(".swiper", {
       const moreElements = document.querySelectorAll(".brand-more"); 
       const btnMore = document.querySelectorAll(".lease__more"); 
       const btnClouse = document.querySelectorAll(".lease__clouse"); 
+      const btnZwei = document.querySelectorAll(".brand-tbl");
     
-      let allHidden = false;
+      let all = false;
       let btnsClouse = false;
       let btnsMore = false;
+      let btnsZwei = false;
 
 
       /* ---------------открываем и закрываем блоки --------------- */
 
       moreElements.forEach((more) => {
         if (more.style.display === "flex")  {
-          allHidden = true;
+          all = true;
         }
       });
 
-      if (allHidden) {
+      if (all) {
 
         moreElements.forEach((more) => {
           more.style.display = "none";
@@ -139,4 +175,58 @@ let swiper = new Swiper(".swiper", {
           more.style.display = "none";
         });
       } 
+
+    /*   btnsZwei = Array.from(btnZwei).every(
+        (el) => window.getComputedStyle(el).display === "none"
+      );
+
+      if (btnsZwei) {
+        btnZwei.forEach((el) => (el.style.display = "flex"));
+      } else {
+        btnZwei.forEach((el) => (el.style.display = "none"));
+      } */
+
+
+
+
+
+      /*  ---------------------доп кнопу на планшете показать еще ------------------------------ */
+    
+    
+      btnsZwei = Array.from(btnZwei).every(
+        (el) => window.getComputedStyle(el).display === "none"
+      );
+
+      if (btnsZwei) {
+        btnZwei.forEach((el) => (el.style.display = "none"));
+      }  else {
+        btnZwei.forEach((el) => (el.style.display = "flex"));
+      }
+    
+    
+    
+    
+      /*   btnsZwei = Array.from(btnZwei).every(
+        (el) => window.getComputedStyle(el).display === "flex"
+      );
+
+      if (btnsZwei) {
+        btnZwei.forEach((el) => (el.style.display = "none"));
+      } */ /* else {
+        btnZwei.forEach((el) => (el.style.display = "flex"));
+      } */
+    
+     /*  if (btnsZwei) {
+
+        btnZwei.forEach((more) => {
+          more.style.display = "flex";
+        });
+
+      } else {
+
+        btnZwei.forEach((more) => {
+          more.style.display = "none";
+        });
+    } */
+      
     }
