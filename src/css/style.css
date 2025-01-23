@@ -101,6 +101,10 @@ margin-right: 16px;
     height: 24px;
     cursor: pointer;
 }
+.moreactive {
+    display: none;
+}
+
 .lease__clouse {
     display: none;
     justify-content: space-between;
@@ -112,6 +116,10 @@ margin-right: 16px;
     height: 24px;
     cursor: pointer;
 }
+.clouseactive {
+    display: flex;
+}
+
 .lease__open-clouse {
     background-image: url(../img/expand.svg);
     width: 24px;
