@@ -44,6 +44,13 @@
     .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
         display: none;
        }
+       
+}
+
+@media (max-width: 768px) {
+    .brand-tbl {
+        display: none;
+    }
 }
 @media (min-width: 767px) {
    
@@ -55,6 +62,10 @@
         margin-right: 24px;
         width: 224px;
     }
+
+    .brand-tbl {
+        display: none;
+    }
 }
 
     .brand {
@@ -62,14 +73,7 @@
         width: 212px;
     }
 
-@media (max-width: 715px) {
 
-    .wrapper__brand {
-       justify-content: center;
-    }
-    
-    
-}
 
 @media (min-width: 800px) {
     .wrapper__brand {
@@ -79,11 +83,18 @@
         margin-right: 24px;
         width: 232px;
     }
+    .brand-tbl {
+        display: flex;
+    }
 }
+
 
 @media (min-width: 830px) {
     .brand {
         width: 240px;
+    }
+    .brand-tbl {
+        display: flex;
     }
 }
 

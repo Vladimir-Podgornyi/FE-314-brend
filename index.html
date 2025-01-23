@@ -16,6 +16,7 @@
         <div class="text">
             <div class="text__desc">Ремонт техники различных брендов</div>
         </div>
+
        <!--  для мобилки ------------------------------ -->
 
 
@@ -96,6 +97,8 @@
 
 
  <!--  Для компьютера ----------------------------- -->
+
+
         <div class="wrapper__brand">
                 <div class="brand">
                     <img src="src/img/Lenova.png" alt="Lenova" class="brand__img">
@@ -127,13 +130,16 @@
                     </a>
                     </img>
                 </div>
-                <div class="brand">
+
+                <!--  скрываю эти элементы на планшете----------------- -->
+
+                <div class="brand brand-tbl">
                     <img src="src/img/Hp.png" alt="Hp" class="brand__img">
                     <a href="#" class="brand__weiter">
                     </a>
                     </img>
                 </div>
-                <div class="brand">
+                <div class="brand brand-tbl">
                     <img src="src/img/acer.png" alt="acer" class="brand__img">
                     <a href="#" class="brand__weiter">
                     </a>
@@ -170,9 +176,17 @@
             </div>
             </div>
         </div>
-        <button class="lease" id="lease" onclick="readMore()">
-            <div class="lease__open"></div>
-            <div class="lease__text">Показать все</div>
+        <!-- <button class="lease" id="lease" onclick="readMore()" -->
+
+
+            <button class="lease__more" onclick="readMore()">
+                <div class="lease__open-more"></div>
+                <div class="lease__text-more">Показать всё</div>
+            </button>
+            <button class="lease__clouse" onclick="readSmall()">
+                <div class="lease__open-clouse"></div>
+                <div class="lease__text-clouse">Скрыть</div>
+            </button>
         </button>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

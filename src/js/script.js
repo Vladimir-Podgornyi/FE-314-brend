@@ -4,82 +4,139 @@ let swiper = new Swiper(".swiper", {
       el: '.swiper-pagination',
       clickable: true,
     },
-    loop: true,
     });
 
 
+    
+    
+    
     /* Читать Далее ------------------------- */
 
 
     function readMore() {
       const moreElements = document.querySelectorAll(".brand-more"); 
-      const btn = document.querySelector(".lease"); 
+      const btnMore = document.querySelectorAll(".lease__more"); 
+      const btnClouse = document.querySelectorAll(".lease__clouse"); 
     
       let allHidden = true;
-    
-      // Проверяем, скрыты ли все элементы
+      let btnsClouse = true;
+      let btnsMore = true;
+
+
+      /* ---------------открываем и закрываем блоки --------------- */
+
       moreElements.forEach((more) => {
-        if (more.style.display !== "none" && more.style.display !== "") {
-          allHidden = false;
+        if (more.style.display === "none")  {
+          allHidden = true;
         }
       });
-    
+
       if (allHidden) {
-        // Если все элементы скрыты, показываем их
+
         moreElements.forEach((more) => {
           more.style.display = "flex";
         });
-        btn.innerHTML = "Скрыть"; // Меняем текст кнопки
+
       } else {
-        // Если хотя бы один элемент показан, скрываем их
+
         moreElements.forEach((more) => {
           more.style.display = "none";
         });
-        btn.innerHTML = "Показать всё"; // Меняем текст кнопки
-      }
     }
-
-   /*  
-    function readMore () {
-      const more = document.querySelectorAll(".brand-more");
-      const btn = document.getElementById(".lease");
-
-      if(more.style.display === "none") {
-        more.style.display="block";
-        btn.innerHTML="Показать всё";
-      } else {
-        btn.innerHTML ="Скрыть";
-        more.style.display ="none"
+   /*  ---------------------скрыл кнопу показать еще ------------------------------ */
+   
+    btnMore.forEach((more) => {
+      if (more.style.display === "flex")  {
+        btnsMore = true;
       }
-    } */
+    });
 
+  
+      if (btnsMore) {
 
-/* let swiperInstance; // Переменная для хранения экземпляра Swiper
-
-// Функция для проверки ширины экрана и управления слайдером
-function handleSwiper() {
-  if (window.innerWidth <= 768) {
-    // Если экран меньше или равен 768px и Swiper ещё не создан
-    if (!swiperInstance) {
-      swiperInstance = new Swiper('.swiper', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        loop: true,
+        btnMore.forEach((more) => {
+          more.style.display = "none";
+        });
+      } 
+       /*  ---------------------показал кнопу показать еще ------------------------------ */
+       
+       btnClouse.forEach((more) => {
+        if (more.style.display === "none")  {
+          btnsClouse = true;
+        }
       });
-    }
-  } else {
-    // Если экран больше 768px и Swiper создан, уничтожаем его
-    if (swiperInstance) {
-      swiperInstance.destroy(true, true);
-      swiperInstance = null;
-    }
-  }
-}
+      
+       if (btnsClouse) {
 
-// Вызываем функцию при загрузке страницы и изменении размера экрана
-handleSwiper();
-window.addEventListener('resize', handleSwiper); */
+        btnClouse.forEach((more) => {
+          more.style.display = "flex";
+        });
+      } 
+    }
+
+
+
+
+
+
+
+    function readSmall() {
+      const moreElements = document.querySelectorAll(".brand-more"); 
+      const btnMore = document.querySelectorAll(".lease__more"); 
+      const btnClouse = document.querySelectorAll(".lease__clouse"); 
+    
+      let allHidden = false;
+      let btnsClouse = false;
+      let btnsMore = false;
+
+
+      /* ---------------открываем и закрываем блоки --------------- */
+
+      moreElements.forEach((more) => {
+        if (more.style.display === "flex")  {
+          allHidden = true;
+        }
+      });
+
+      if (allHidden) {
+
+        moreElements.forEach((more) => {
+          more.style.display = "none";
+        });
+
+      } else {
+
+        moreElements.forEach((more) => {
+          more.style.display = "flex";
+        });
+    }
+   /*  ---------------------показал кнопу показать еще ------------------------------ */
+   
+    btnMore.forEach((more) => {
+      if (more.style.display === "none")  {
+        btnsMore = true;
+      }
+    });
+
+  
+      if (btnsMore) {
+
+        btnMore.forEach((more) => {
+          more.style.display = "flex";
+        });
+      } 
+       /*  ---------------------скрыл кнопу показать еще ------------------------------ */
+       
+       btnClouse.forEach((more) => {
+        if (more.style.display === "flex")  {
+          btnsClouse = true;
+        }
+      });
+      
+       if (btnsClouse) {
+
+        btnClouse.forEach((more) => {
+          more.style.display = "none";
+        });
+      } 
+    }
