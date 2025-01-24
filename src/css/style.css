@@ -10,6 +10,17 @@ html {
 .section {
     max-width: 100vw;    
 }
+.line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #d9fff5;;
+}
+.line::before {
+    width: 100%;
+    height: 1px;
+    background: red;
+}
 
 .text {
     display: block;
