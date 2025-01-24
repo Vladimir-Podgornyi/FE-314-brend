@@ -4,6 +4,9 @@
         width: 240px;
         min-width: 0;
     }
+    .lease__more {
+        display: none;
+    }
    
     
    .swiper-slide {
@@ -46,6 +49,9 @@
        }
     .text__desc {
     margin: 16px 0 16px 32px;
+    }
+    .lease__more {
+        display: flex;
     }
        
        
