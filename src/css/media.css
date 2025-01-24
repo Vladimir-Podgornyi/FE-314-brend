@@ -55,6 +55,10 @@
     .brand-tbl {
         display: none;
     }
+    .brand-js {
+        display: none;
+    }
+    
 }
 @media (min-width: 767px) {
    
