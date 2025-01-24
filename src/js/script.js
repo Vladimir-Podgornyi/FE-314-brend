@@ -62,6 +62,9 @@ let swiper = new Swiper(".swiper", {
         brandTabl.forEach((item) => {
           item.style.display = 'flex'; // Показываем элементы
         });
+        leaseMore.style.display = 'none'; // Тут скрываем кнопку Показать всё
+        leaseClouse.style.display = 'flex'; // Тут показываем кнопку Скрыть
+      
       });
     
 
@@ -71,6 +74,8 @@ let swiper = new Swiper(".swiper", {
         brandTabl.forEach((item) => {
           item.style.display = 'none'; // Скрываем элементы
         });
+        leaseClouse.style.display = 'none'; // Скрываем кнопку Скрыть
+          leaseMore.style.display = 'flex'; // Показываем кнопку Показать всё
       });
     }
 
