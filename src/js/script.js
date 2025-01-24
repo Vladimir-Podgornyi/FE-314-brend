@@ -4,6 +4,7 @@ let swiper = new Swiper(".swiper", {
       el: '.swiper-pagination',
       clickable: true,
     },
+    spaceBetween: 16, 
     });
 
 

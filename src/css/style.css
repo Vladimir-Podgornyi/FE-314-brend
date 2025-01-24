@@ -67,7 +67,9 @@ html {
 .brand-more {
     display: flex;
 }
-
+.swiper {
+    overflow:visible;
+}
 .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
 
     top: 185px;
