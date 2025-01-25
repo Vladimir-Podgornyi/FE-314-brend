@@ -1,28 +1,13 @@
 
 @media (min-width: 320px),(max-width: 320px) {
-    .swiper {
-        width: 240px;
-        min-width: 0;
-    }
+  
+    
     .lease__more {
         display: none;
     }
    
     
-   .swiper-slide {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        width: 240px;
-        height: 72px;
-        background-color: white;
-        margin: 16px 16px 0 0;
-        
-        box-sizing: border-box;
-        text-align: center;
-        align-items: center;
-   }
+  
    
     .text{
         padding-bottom: 16px;
@@ -35,6 +20,7 @@
     .wrapper__brand {
         display: none;  
     }
+  
 }
 
 @media (min-width: 500px) {

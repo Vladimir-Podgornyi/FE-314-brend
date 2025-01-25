@@ -5,6 +5,8 @@ let swiper = new Swiper(".swiper", {
       clickable: true,
     },
     spaceBetween: 16, 
+    centeredSlides: false,
+    
     });
 
 

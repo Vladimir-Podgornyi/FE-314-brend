@@ -31,8 +31,8 @@ html {
     height: 56px;
     padding-top: 10px;
     width: 100%; 
-    padding-right: 32px;
     background: linear-gradient(to right, #f8f8f8 15%, white 100%);
+    padding-right: 21px;
 }
 .text__desc {
     width: 100%; 
@@ -68,11 +68,20 @@ html {
     display: flex;
 }
 .swiper {
-    overflow:visible;
+    margin: 16px; 
+   
 }
-.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
 
-    top: 185px;
+.swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal, 
+.swiper-pagination-custom, 
+.swiper-pagination-fraction {
+    top: 185px; 
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .swiper-pagination-bullet {
@@ -81,6 +90,27 @@ html {
     background: #ddd;
 }
 
+.swiper-slide {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 240px !important;
+    height: 72px;
+    background-color: white;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    margin: 0; 
+    min-width: 0;
+}
+
+.swiper-container {
+    width: 100%; 
+    min-width: 0;
+    overflow: hidden; 
+    margin-right: 16px;
+}
 
 
 
