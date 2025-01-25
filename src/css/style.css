@@ -95,7 +95,7 @@ html {
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 240px !important;
+    width: 240px ;
     height: 72px;
     background-color: white;
     box-sizing: border-box;
